@@ -9,6 +9,7 @@ export const listaCursos = [
     progresso: 40,
     emAndamento: true,
   },
+
   {
     id: 2,
     categoria: "Marketing",
@@ -18,6 +19,7 @@ export const listaCursos = [
     imagem: "/curso-marketing.jpg",
     emAndamento: false,
   },
+
   {
     id: 3,
     categoria: "Financeiro",

@@ -2,7 +2,6 @@ import styles from "./Parceiros.module.css";
 import { listaCursos } from "../../Shared/Cursos";
 
 function CursoCard({ curso }) {
-    const cursos = listaCursos;
   return (
     <article className={styles.card}>
       <div className={styles.imagemContainer}>
@@ -45,13 +44,13 @@ function CursoCard({ curso }) {
                 style={{
                   width: `${curso.progresso}%`,
                 }}
-              />
+              ></div>
             </div>
           </div>
         )}
 
         <button className={styles.botao}>
-          <i className="bi bi-play"></i>
+          <i className="bi bi-play-fill"></i>
 
           {curso.emAndamento
             ? "Continuar Curso"
@@ -64,29 +63,25 @@ function CursoCard({ curso }) {
 
 function Parceiros() {
   return (
-    <div className={styles.pagina}>
-      <Sidebar />
+    <main className={styles.conteudoPrincipal}>
+      <header className={styles.cabecalho}>
+        <h1>Cursos Profissionalizantes</h1>
 
-      <main className={styles.conteudoPrincipal}>
-        <header className={styles.cabecalho}>
-          <h1>Cursos Profissionalizantes</h1>
+        <p>
+          Aprimore suas habilidades e impulsione seu negócio
+          com nossos cursos gratuitos.
+        </p>
+      </header>
 
-          <p>
-            Aprimore suas habilidades e impulsione seu negócio
-            com nossos cursos gratuitos.
-          </p>
-        </header>
-
-        <section className={styles.gridCursos}>
-          {cursos.map((curso) => (
-            <CursoCard
-              key={curso.id}
-              curso={curso}
-            />
-          ))}
-        </section>
-      </main>
-    </div>
+      <section className={styles.gridCursos}>
+        {listaCursos.map((curso) => (
+          <CursoCard
+            key={curso.id}
+            curso={curso}
+          />
+        ))}
+      </section>
+    </main>
   );
 }
 
