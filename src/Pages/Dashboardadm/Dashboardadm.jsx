@@ -3,13 +3,11 @@ import styles from "./Dashboardadm.module.css";
 function Dashboardadm() {
   return (
     <div className={styles.dashboard}>
-    
       <aside className={styles.sidebarAdm}>
-   
         <div className={styles.logo}>
           <img
             src="/logoIR1.png"
-            alt="Instituto Recomeçar"
+            alt="Logo Instituto Recomeçar"
           />
 
           <div>
@@ -18,7 +16,6 @@ function Dashboardadm() {
           </div>
         </div>
 
-       
         <nav className={styles.menu}>
           <a
             href="#"
@@ -67,9 +64,7 @@ function Dashboardadm() {
         </div>
       </aside>
 
- 
       <main className={styles.conteudo}>
-   
         <header className={styles.cabecalho}>
           <div className={styles.titulo}>
             <span>Administrador</span>
@@ -95,7 +90,6 @@ function Dashboardadm() {
           </div>
         </header>
 
-      
         <section className={styles.areaDashboard}>
           <div className={styles.introducao}>
             <h2>Visão geral</h2>
@@ -106,9 +100,7 @@ function Dashboardadm() {
             </p>
           </div>
 
-        
           <div className={styles.cards}>
-          
             <div className={styles.card}>
               <div
                 className={`${styles.icone} ${styles.iconeRoxo}`}
@@ -119,12 +111,9 @@ function Dashboardadm() {
               <div className={styles.cardTexto}>
                 <span>Acessos</span>
 
-                <strong>1.248</strong>
+                <strong>128</strong>
 
-                <small>
-                  <i className="bi bi-arrow-up"></i>
-                  Acessos este mês
-                </small>
+                <small>Este mês</small>
               </div>
             </div>
 
@@ -138,15 +127,89 @@ function Dashboardadm() {
               <div className={styles.cardTexto}>
                 <span>Novos cadastros</span>
 
-                <strong>86</strong>
+                <strong>12</strong>
 
-                <small>
-                  <i className="bi bi-arrow-up"></i>
-                  Novas usuárias este mês
-                </small>
+                <small>Este mês</small>
+              </div>
+            </div>
+
+            <div className={styles.card}>
+              <div
+                className={`${styles.icone} ${styles.iconeVerde}`}
+              >
+                <i className="bi bi-people-fill"></i>
+              </div>
+
+              <div className={styles.cardTexto}>
+                <span>Usuárias ativas</span>
+
+                <strong>9</strong>
+
+                <small>Atualmente</small>
+              </div>
+            </div>
+
+            <div className={styles.card}>
+              <div
+                className={`${styles.icone} ${styles.iconeLaranja}`}
+              >
+                <i className="bi bi-person-heart"></i>
+              </div>
+
+              <div className={styles.cardTexto}>
+                <span>Parceiros cadastrados</span>
+
+                <strong>4</strong>
+
+                <small>Total</small>
               </div>
             </div>
           </div>
+
+          <section className={styles.resumo}>
+            <div className={styles.resumoCabecalho}>
+              <div>
+                <h2>Resumo do período</h2>
+
+                <p>
+                  Confira os principais números da
+                  plataforma neste início.
+                </p>
+              </div>
+
+              <span className={styles.periodo}>
+                Este mês
+              </span>
+            </div>
+
+            <div className={styles.resumoItens}>
+              <div className={styles.resumoItem}>
+                <span>Acessos</span>
+                <strong>128</strong>
+              </div>
+
+              <div className={styles.linha}></div>
+
+              <div className={styles.resumoItem}>
+                <span>Novos cadastros</span>
+                <strong>12</strong>
+              </div>
+
+              <div className={styles.linha}></div>
+
+              <div className={styles.resumoItem}>
+                <span>Usuárias ativas</span>
+                <strong>9</strong>
+              </div>
+
+              <div className={styles.linha}></div>
+
+              <div className={styles.resumoItem}>
+                <span>Parceiros</span>
+                <strong>4</strong>
+              </div>
+            </div>
+          </section>
         </section>
       </main>
     </div>
