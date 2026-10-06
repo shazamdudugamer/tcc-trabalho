@@ -1,0 +1,30 @@
+export const listaCursos = [
+  {
+    id: 1,
+    categoria: "Negócios",
+    titulo: "Empreendedorismo Digital para Iniciantes",
+    duracao: "12h",
+    avaliacao: "4.9",
+    imagem: "/curso-empreendedorismo.jpg",
+    progresso: 40,
+    emAndamento: true,
+  },
+  {
+    id: 2,
+    categoria: "Marketing",
+    titulo: "Marketing para Redes Sociais",
+    duracao: "8h",
+    avaliacao: "4.8",
+    imagem: "/curso-marketing.jpg",
+    emAndamento: false,
+  },
+  {
+    id: 3,
+    categoria: "Financeiro",
+    titulo: "Finanças e Fluxo de Caixa",
+    duracao: "15h",
+    avaliacao: "5",
+    imagem: "/curso-financeiro.jpg",
+    emAndamento: false,
+  },
+];

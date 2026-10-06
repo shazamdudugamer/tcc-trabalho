@@ -3,6 +3,7 @@ import Sidebar from "../Componentes/Sidebar";
 import Suporte from "../Pages/Suporte/Suporte";
 import Agenda_psicologo from "../Pages/Agenda_Psicologo/Agenda_psicologos";
 import Sobre_nos from "../Pages/Sobre_nos/Sobre_nos";
+import Parceiros from "../Pages/Parceiros/Parceiro";
 
 function AppRoutes() {
   return (
@@ -20,6 +21,10 @@ function AppRoutes() {
          <Route
           path="/Sobre_nos"
           element={<Sobre_nos />}
+        />
+         <Route
+          path="/Parceiros"
+          element={<Parceiros />}
         />
       </Routes>
     </>

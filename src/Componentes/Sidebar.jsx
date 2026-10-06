@@ -81,6 +81,10 @@ function Sidebar() {
             <i className="bi bi-headphones"></i>
            sobre nos
           </Link>
+            <Link to="/Parceiros" onClick={fecharMenu}>
+            <i className="bi bi-headphones"></i>
+           cursos Profissionalizantes
+          </Link>
 
           <a href="#" onClick={fecharMenu}>
             <i className="bi bi-chat"></i>
