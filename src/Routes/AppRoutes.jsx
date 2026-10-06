@@ -6,6 +6,7 @@ import Suporte from "../Pages/Suporte/Suporte";
 import Agenda_psicologo from "../Pages/Agenda_Psicologo/Agenda_psicologos";
 import Sobre_nos from "../Pages/Sobre_nos/Sobre_nos";
 import Parceiros from "../Pages/Parceiros/Parceiros";
+import Dashboardadm from "../Pages/Dashboardadm/Dashboardadm";
 
 function AppRoutes() {
   return (
@@ -41,6 +42,11 @@ function AppRoutes() {
         <Route
           path="/Parceiros"
           element={<Parceiros />}
+        />
+
+        <Route
+          path="/dashboardadm"
+          element={<Dashboardadm />}
         />
       </Routes>
     </>

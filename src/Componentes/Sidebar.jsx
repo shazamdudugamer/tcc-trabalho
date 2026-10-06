@@ -95,6 +95,10 @@ function Sidebar() {
             <i className="bi bi-headphones"></i>
             Suporte
           </Link>
+            <Link to="/dashboardadm" onClick={fecharMenu}>
+            <i className="bi bi-headphones"></i>
+            Dashboard
+          </Link>
         </nav>
 
         <section className={styles.rodapeSidebar}>
