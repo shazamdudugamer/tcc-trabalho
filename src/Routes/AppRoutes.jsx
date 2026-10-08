@@ -8,6 +8,7 @@ import Sobre_nos from "../Pages/Sobre_nos/Sobre_nos";
 import Parceiros from "../Pages/Parceiros/Parceiros";
 import Dashboardadm from "../Pages/Dashboardadm/Dashboardadm";
 import Usuarias from "../Pages/Usuarias/Usuarias";
+
 function AppRoutes() {
   return (
     <>
@@ -48,11 +49,12 @@ function AppRoutes() {
           path="/dashboardadm"
           element={<Dashboardadm />}
         />
+
+        <Route
+          path="/usuarias"
+          element={<Usuarias />}
+        />
       </Routes>
-      <Route
-  path="/usuarias"
-  element={<Usuarias />}
-/>
     </>
   );
 }

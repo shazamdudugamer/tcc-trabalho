@@ -1,13 +1,5 @@
-import styles from "./>Usuarias.module.css"
-import {
-  ChevronLeft,
-  ChevronRight,
-  Filter,
-  MoreVertical,
-  Search,
-  Star
-} from "lucide-react";
-import styles from "./usuarias.module.css";
+import { useMemo, useState } from "react";
+import styles from "./Usuarias.module.css";
 
 const usuarios = [
   {
@@ -71,7 +63,7 @@ const usuarios = [
     localizacao: "Salvador, BA",
     avaliacao: "5.0",
     status: "Ativo",
-    imagem: "9"
+    imagem: ""
   }
 ];
 
@@ -118,7 +110,7 @@ function Usuarias() {
 
           <button className={styles.admin}>
             <img
-              src="https://i.pravatar.cc/100?img=12"
+              src=""
               alt="Admin"
             />
             <span>Admin</span>
@@ -142,7 +134,7 @@ function Usuarias() {
 
         <div className={styles.ferramentas}>
           <div className={styles.busca}>
-            <Search size={18} />
+            <i className="bi bi-search"></i>
 
             <input
               type="text"
@@ -158,7 +150,7 @@ function Usuarias() {
             }`}
             onClick={() => setFiltroAberto(!filtroAberto)}
           >
-            <Filter size={17} />
+            <i className="bi bi-funnel"></i>
             Filtros
           </button>
 
@@ -203,7 +195,11 @@ function Usuarias() {
             >
               <div className={styles.usuario}>
                 <img
-                  src={usuario.imagem}
+                  src={
+                    usuario.imagem
+                      ? ``
+                      : ""
+                  }
                   alt={usuario.nome}
                 />
 
@@ -224,19 +220,20 @@ function Usuarias() {
               <div className={styles.avaliacao}>
                 {usuario.avaliacao ? (
                   <>
-                    <Star
-                      size={16}
-                      fill="#ffb71b"
-                      color="#ffb71b"
-                    />
+                    <i
+                      className="bi bi-star-fill"
+                      style={{ color: "#ffb71b" }}
+                    ></i>
+
                     <strong>{usuario.avaliacao}</strong>
                   </>
                 ) : (
                   <>
-                    <Star
-                      size={16}
-                      color="#c7cbd1"
-                    />
+                    <i
+                      className="bi bi-star"
+                      style={{ color: "#c7cbd1" }}
+                    ></i>
+
                     <strong>N/A</strong>
                   </>
                 )}
@@ -257,7 +254,7 @@ function Usuarias() {
               </div>
 
               <button className={styles.acoes}>
-                <MoreVertical size={18} />
+                <i className="bi bi-three-dots-vertical"></i>
               </button>
             </div>
           ))}
@@ -278,7 +275,7 @@ function Usuarias() {
                 disabled={pagina === 1}
                 onClick={() => setPagina(1)}
               >
-                <ChevronLeft size={15} />
+                <i className="bi bi-chevron-left"></i>
                 Anterior
               </button>
 
@@ -287,7 +284,7 @@ function Usuarias() {
                 onClick={() => setPagina(2)}
               >
                 Próxima
-                <ChevronRight size={15} />
+                <i className="bi bi-chevron-right"></i>
               </button>
             </div>
           </footer>
