@@ -7,7 +7,7 @@ import Agenda_psicologo from "../Pages/Agenda_Psicologo/Agenda_psicologos";
 import Sobre_nos from "../Pages/Sobre_nos/Sobre_nos";
 import Parceiros from "../Pages/Parceiros/Parceiros";
 import Dashboardadm from "../Pages/Dashboardadm/Dashboardadm";
-
+import Usuarias from "../Pages/Usuarias/Usuarias";
 function AppRoutes() {
   return (
     <>
@@ -49,6 +49,10 @@ function AppRoutes() {
           element={<Dashboardadm />}
         />
       </Routes>
+      <Route
+  path="/usuarias"
+  element={<Usuarias />}
+/>
     </>
   );
 }

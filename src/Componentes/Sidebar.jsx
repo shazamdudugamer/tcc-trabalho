@@ -99,6 +99,11 @@ function Sidebar() {
             <i className="bi bi-headphones"></i>
             Dashboard
           </Link>
+          <Link to="/usuarias" onClick={fecharMenu}>
+  <i className="bi bi-people"></i>
+  Usuárias
+</Link>
+
         </nav>
 
         <section className={styles.rodapeSidebar}>
