@@ -1,234 +1,171 @@
-.pagina{
- 
-min-height:100vh;
- 
-margin-left:200px;
- 
-padding:35px;
- 
-background:#f9e9f0;
- 
-font-family:Arial,sans-serif;
- 
+.pagina {
+  min-height: 100vh;
+  margin-left: 200px;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #FBEFF3;
+  color: #4A2D6B;
+  font-family: Arial, sans-serif;
+  min-width: 0;
 }
- 
- 
-.titulo h1{
- 
-margin:0;
- 
-color:#43216c;
- 
+
+.titulo h1 {
+  margin: 0;
+  color: #4A2D6B;
+  font-size: 28px;
 }
- 
- 
-.titulo p{
- 
-color:#92739f;
- 
-font-size:14px;
- 
+
+.titulo p {
+  color: #4A2D6B;
+  font-size: 14px;
+  line-height: 1.6;
 }
- 
- 
- 
-.ferramentas{
- 
-display:flex;
- 
-gap:15px;
- 
-margin:25px 0;
- 
+
+.ferramentas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px 0;
 }
- 
- 
-input,
-select{
- 
-padding:12px 15px;
- 
-border-radius:20px;
- 
-border:1px solid #dfbfd0;
- 
-background:white;
- 
-outline:none;
- 
+
+.ferramentas input,
+.ferramentas select {
+  box-sizing: border-box;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #E2CAD2;
+  background: #FFFFFF;
+  color: #4A2D6B;
+  font: inherit;
+  outline: none;
 }
- 
- 
- 
-input{
- 
-width:300px;
- 
+
+.ferramentas input {
+  width: 300px;
+  max-width: 100%;
 }
- 
- 
- 
-.tabela{
- 
-background:white;
- 
-border-radius:15px;
- 
-overflow:hidden;
- 
+
+.ferramentas input:focus,
+.ferramentas select:focus {
+  border-color: #7A5A9A;
 }
- 
- 
- 
+
+.tabela {
+  width: 100%;
+  background: #E4BCC9;
+  border: 1px solid #E2CAD2;
+  border-radius: 15px;
+  overflow-x: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 .cabecalho,
-.linha{
- 
-display:grid;
- 
-grid-template-columns:
-2fr 1.5fr 1.5fr 1fr 1fr;
- 
-align-items:center;
- 
-padding:18px 20px;
- 
+.linha {
+  display: grid;
+  grid-template-columns: 1.7fr 1.4fr 1.4fr 0.8fr 0.8fr;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  min-width: 720px;
+  box-sizing: border-box;
 }
- 
- 
- 
-.cabecalho{
- 
-background:#f4e5ee;
- 
-color:#765987;
- 
-font-size:13px;
- 
+
+.cabecalho {
+  background: #E4BCC9;
+  color: #4A2D6B;
+  border-bottom: 1px solid #E2CAD2;
+  font-size: 13px;
+  font-weight: bold;
 }
- 
- 
- 
-.linha{
- 
-border-bottom:1px solid #eee;
- 
-transition:.2s;
- 
+
+.linha {
+  border-bottom: 1px solid #E2CAD2;
+  transition: background 0.2s;
 }
- 
- 
- 
-.linha:hover{
- 
-background:#fcf5f8;
- 
+
+.linha:last-child {
+  border-bottom: none;
 }
- 
- 
- 
-.linha strong{
- 
-display:block;
- 
-color:#43216c;
- 
+
+.linha:hover {
+  background: #FBEFF3;
 }
- 
- 
- 
-.linha small{
- 
-color:#92739f;
- 
+
+.linha strong {
+  display: block;
+  color: #4A2D6B;
+  overflow-wrap: anywhere;
 }
- 
- 
- 
+
+.linha small {
+  display: block;
+  margin-top: 5px;
+  color: #4A2D6B;
+  overflow-wrap: anywhere;
+}
+
+.linha > span {
+  color: #4A2D6B;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
 .ativo,
 .pendente,
-.inativo{
- 
-padding:5px 12px;
- 
-border-radius:20px;
- 
-font-size:12px;
- 
-width:max-content;
- 
+.inativo {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
 }
- 
- 
- 
-.ativo{
- 
-background:#e4f5eb;
- 
-color:#3c9b68;
- 
+
+.ativo {
+  background: #FBEFF3;
+  color: #4A2D6B;
+  border: 1px solid #7A5A9A;
 }
- 
- 
- 
-.pendente{
- 
-background:#fff1d8;
- 
-color:#d58a20;
- 
+
+.pendente {
+  background: #E4BCC9;
+  color: #4A2D6B;
+  border: 1px solid #7A5A9A;
 }
- 
- 
- 
-.inativo{
- 
-background:#ffe5e5;
- 
-color:#d94b4b;
- 
+
+.inativo {
+  background: #FBEFF3;
+  color: #4A2D6B;
+  border: 1px solid #E2CAD2;
 }
- 
- 
- 
-@media(max-width:900px){
- 
-.pagina{
- 
-  margin-left:0;
- 
+
+@media (max-width: 900px) {
+  .pagina {
+    margin-left: 0;
+  }
 }
- 
- 
-.tabela{
- 
-  overflow-x:auto;
- 
-}
- 
- 
-.cabecalho,
-.linha{
- 
-  min-width:750px;
- 
-}
- 
-}
- 
- 
-@media(max-width:600px){
- 
-.ferramentas{
- 
-  flex-direction:column;
- 
-}
- 
- 
-input{
- 
-  width:auto;
- 
-}
- 
+
+@media (max-width: 600px) {
+  .pagina {
+    padding: 20px 14px;
+  }
+
+  .titulo h1 {
+    font-size: 23px;
+  }
+
+  .ferramentas {
+    flex-direction: column;
+  }
+
+  .ferramentas input,
+  .ferramentas select {
+    width: 100%;
+    max-width: none;
+  }
+
+  .cabecalho,
+  .linha {
+    padding: 15px;
+  }
 }

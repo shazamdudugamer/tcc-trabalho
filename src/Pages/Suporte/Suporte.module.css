@@ -1,236 +1,170 @@
-.pagina{
- 
-min-height:100vh;
- 
-margin-left:200px;
- 
-padding:35px;
- 
-background:#fdebf3;
- 
-font-family:Arial,sans-serif;
- 
+
+.pagina {
+  min-height: 100vh;
+  margin-left: 200px;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #FBEFF3;
+  color: #4A2D6B;
+  font-family: Arial, sans-serif;
+  min-width: 0;
 }
- 
- 
- 
-.titulo h1{
- 
-color:#4c2868;
- 
-margin:0;
- 
+
+.titulo h1 {
+  color: #4A2D6B;
+  margin: 0;
+  font-size: 28px;
 }
- 
- 
-.titulo p{
- 
-color:#806b85;
- 
+
+.titulo p {
+  color: #4A2D6B;
+  line-height: 1.6;
 }
- 
- 
- 
-.cards{
- 
-margin-top:30px;
- 
-display:grid;
- 
-grid-template-columns:repeat(3,1fr);
- 
-gap:20px;
- 
+
+.cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
- 
- 
- 
-.card{
- 
-background:white;
- 
-padding:25px;
- 
-border-radius:15px;
- 
-text-align:center;
- 
-transition:.3s;
- 
+
+.card {
+  min-width: 0;
+  box-sizing: border-box;
+  background: #E4BCC9;
+  border: 1px solid #E2CAD2;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
- 
- 
- 
-.card:hover{
- 
-transform:translateY(-5px);
- 
+
+.card:hover {
+  transform: translateY(-4px);
 }
- 
- 
- 
-.icone{
- 
-width:55px;
- 
-height:55px;
- 
-margin:auto;
- 
-display:flex;
- 
-justify-content:center;
- 
-align-items:center;
- 
-border-radius:50%;
- 
-background:#eee1f5;
- 
-color:#925ab4;
- 
-font-size:24px;
- 
+
+.icone {
+  width: 55px;
+  height: 55px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #FBEFF3;
+  border: 1px solid #E2CAD2;
+  color: #7A5A9A;
+  font-size: 24px;
 }
- 
- 
- 
-.card h2{
- 
-color:#4c2868;
- 
-font-size:18px;
- 
+
+.card h2 {
+  color: #4A2D6B;
+  font-size: 18px;
 }
- 
- 
- 
-.card p{
- 
-color:#756276;
- 
-font-size:14px;
- 
+
+.card p {
+  color: #4A2D6B;
+  font-size: 14px;
+  line-height: 1.6;
 }
- 
- 
- 
+
 .card button,
-.urgente button{
- 
-border:0;
- 
-padding:10px 25px;
- 
-border-radius:20px;
- 
-background:#a46bd3;
- 
-color:white;
- 
-cursor:pointer;
- 
-transition:.2s;
- 
+.urgente button {
+  box-sizing: border-box;
+  border: 1px solid #E2CAD2;
+  padding: 12px 20px;
+  border-radius: 20px;
+  background: #7A5A9A;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background 0.2s;
 }
- 
- 
- 
+
+.card button {
+  width: 100%;
+}
+
 .card button:hover,
-.urgente button:hover{
- 
-opacity:.8;
- 
+.urgente button:hover {
+  background: #4A2D6B;
 }
- 
- 
- 
-.urgente{
- 
-margin-top:30px;
- 
-background:#a46bd3;
- 
-color:white;
- 
-padding:25px;
- 
-border-radius:15px;
- 
-display:flex;
- 
-align-items:center;
- 
-gap:20px;
- 
+
+.urgente {
+  margin-top: 30px;
+  background: #E4BCC9;
+  color: #4A2D6B;
+  border: 1px solid #E2CAD2;
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
- 
- 
- 
-.urgente > i{
- 
-font-size:40px;
- 
+
+.urgente > i {
+  flex-shrink: 0;
+  font-size: 40px;
+  color: #7A5A9A;
 }
- 
- 
- 
-.urgente div{
- 
-flex:1;
- 
+
+.urgente div {
+  flex: 1;
+  min-width: 0;
 }
- 
- 
- 
-.urgente h2{
- 
-margin:0;
- 
+
+.urgente h2 {
+  margin: 0;
+  color: #4A2D6B;
 }
- 
- 
- 
-.urgente p{
- 
-margin:5px 0;
- 
+
+.urgente p {
+  margin: 5px 0;
+  color: #4A2D6B;
+  line-height: 1.6;
 }
- 
- 
- 
-.urgente button{
- 
-background:white;
- 
-color:#8050a5;
- 
+
+.urgente button {
+  flex-shrink: 0;
 }
- 
- 
- 
-@media(max-width:900px){
- 
-.pagina{
- 
-  margin-left:0;
- 
+
+@media (max-width: 1100px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
- 
- 
-.cards{
- 
-  grid-template-columns:1fr;
- 
+
+@media (max-width: 900px) {
+  .pagina {
+    margin-left: 0;
+  }
 }
- 
- 
-.urgente{
- 
-  flex-direction:column;
- 
-  text-align:center;
- 
-}
- 
+
+@media (max-width: 600px) {
+  .pagina {
+    padding: 20px 14px;
+  }
+
+  .titulo h1 {
+    font-size: 23px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .urgente {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px;
+  }
+
+  .urgente button {
+    width: 100%;
+  }
 }
