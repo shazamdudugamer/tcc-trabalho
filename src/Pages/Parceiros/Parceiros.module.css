@@ -108,6 +108,11 @@
   transition: width 0.3s;
 }
 
+.card.sem-progresso .progressoTexto,
+.card.sem-progresso .barra {
+  display: none;
+}
+
 .conteudo button {
   width: 100%;
   box-sizing: border-box;
