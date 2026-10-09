@@ -1,94 +1,101 @@
-
 import styles from "./Agenda_psicologos.module.css";
  
-function Agenda_psicologo() {
  
-  const profissionais = [
-    {
-      nome: "Dra. Camila Mendes",
-      especialidade: "Psicologia Cognitivo-Comportamental",
-      dias: "Seg, Qua, Sex",
-      imagem: "/img/camila.png"
-    },
-    {
-      nome: "Dra. Juliana Oliveira",
-      especialidade: "Saúde Mental da Mulher",
-      dias: "Ter, Qui",
-      imagem: "/img/juliana.png"
-    }
-  ];
+function Agenda_psicologo(){
  
+const profissionais = [
  
-  return (
+  {
+   nome:"Dra. Camila Mendes",
+   area:"Psicologia Cognitivo-Comportamental",
+   dias:"Segunda, Quarta e Sexta",
+   imagem:"/img/camila.png"
+  },
  
-    <div className={styles.container}>
+  {
+   nome:"Dra. Juliana Oliveira",
+   area:"Saúde Mental da Mulher",
+   dias:"Terça e Quinta",
+   imagem:"/img/juliana.png"
+  }
  
-
+];
  
  
-      <div className={styles.titulo}>
+return(
  
-        <h1>
-          Apoio Psicológico
-        </h1>
- 
-        <p>
-          Sua saúde mental é prioridade. Agende sessões gratuitas
-          com nossas profissionais parceiras.
-        </p>
- 
-      </div>
+  <main className={styles.pagina}>
  
  
-      <h2>
-        Profissionais Disponíveis
-      </h2>
+   <header className={styles.titulo}>
+ 
+    <h1>
+     Apoio Psicológico
+    </h1>
+ 
+    <p>
+     Agende sessões gratuitas com nossas
+     profissionais parceiras.
+    </p>
+ 
+   </header>
  
  
-      <div className={styles.cards}>
  
-        {profissionais.map((p,index)=>(
- 
-          <div className={styles.card} key={index}>
- 
-            <img
-              src={p.imagem}
-              alt={p.nome}
-              className={styles.foto}
-            />
+   <h2 className={styles.subtitulo}>
+    Profissionais Disponíveis
+   </h2>
  
  
-            <h3>
-              {p.nome}
-            </h3>
+ 
+   <section className={styles.cards}>
  
  
-            <p className={styles.especialidade}>
-              {p.especialidade}
-            </p>
+    {profissionais.map((p)=>(
+ 
+     <div className={styles.card} key={p.nome}>
  
  
-            <span>
-              {p.dias}
-            </span>
+      <img
+       src={p.imagem}
+       alt={p.nome}
+      />
  
  
-            <button className={styles.botao}>
-              Agendar Sessão
-            </button>
+      <h3>
+       {p.nome}
+      </h3>
  
  
-          </div>
- 
-        ))}
- 
- 
-      </div>
+      <p>
+       {p.area}
+      </p>
  
  
-    </div>
+      <span>
+       {p.dias}
+      </span>
  
-  );
+ 
+ 
+      <button>
+       Agendar Sessão
+      </button>
+ 
+ 
+     </div>
+ 
+ 
+    ))}
+ 
+ 
+   </section>
+ 
+ 
+  </main>
+ 
+);
+ 
 }
  
  

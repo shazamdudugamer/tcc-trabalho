@@ -1,303 +1,236 @@
-.pagina {
-  min-height: 100vh;
-  margin-left: 200px;
-  padding: 20px;
-  background-color: #f8e8ee;
-  box-sizing: border-box;
+.pagina{
+ 
+min-height:100vh;
+ 
+margin-left:200px;
+ 
+padding:35px;
+ 
+background:#fdebf3;
+ 
+font-family:Arial,sans-serif;
+ 
 }
-
-.container {
-  min-height: calc(100vh - 40px);
-  padding: 30px;
-  background-color: #f8e8ee;
-  box-sizing: border-box;
+ 
+ 
+ 
+.titulo h1{
+ 
+color:#4c2868;
+ 
+margin:0;
+ 
 }
-
-
-
-
-.cabecalho {
-  margin-bottom: 25px;
+ 
+ 
+.titulo p{
+ 
+color:#806b85;
+ 
 }
-
-.cabecalho h1 {
-  margin: 0;
-  font-size: 27px;
-  color: #40224f;
-  transition: 0.3s ease;
+ 
+ 
+ 
+.cards{
+ 
+margin-top:30px;
+ 
+display:grid;
+ 
+grid-template-columns:repeat(3,1fr);
+ 
+gap:20px;
+ 
 }
-
-.cabecalho h1:hover {
-  color: #9b72cf;
+ 
+ 
+ 
+.card{
+ 
+background:white;
+ 
+padding:25px;
+ 
+border-radius:15px;
+ 
+text-align:center;
+ 
+transition:.3s;
+ 
 }
-
-.cabecalho p {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #666666;
+ 
+ 
+ 
+.card:hover{
+ 
+transform:translateY(-5px);
+ 
 }
-
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+ 
+ 
+ 
+.icone{
+ 
+width:55px;
+ 
+height:55px;
+ 
+margin:auto;
+ 
+display:flex;
+ 
+justify-content:center;
+ 
+align-items:center;
+ 
+border-radius:50%;
+ 
+background:#eee1f5;
+ 
+color:#925ab4;
+ 
+font-size:24px;
+ 
 }
-
-.card {
-  min-height: 240px;
-  padding: 20px;
-
-  background-color: #ffffff;
-  border: 2px solid #c9b4bd;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+ 
+ 
+ 
+.card h2{
+ 
+color:#4c2868;
+ 
+font-size:18px;
+ 
 }
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #9b72cf;
-  box-shadow: 0 6px 14px rgba(64, 34, 79, 0.15);
+ 
+ 
+ 
+.card p{
+ 
+color:#756276;
+ 
+font-size:14px;
+ 
 }
-
-.icone {
-  width: 55px;
-  height: 55px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 15px;
-
-  border: 1px solid #bbbbbb;
-  border-radius: 4px;
-
-  font-size: 24px;
-
-  transition:
-    transform 0.25s ease,
-    background-color 0.25s ease;
+ 
+ 
+ 
+.card button,
+.urgente button{
+ 
+border:0;
+ 
+padding:10px 25px;
+ 
+border-radius:20px;
+ 
+background:#a46bd3;
+ 
+color:white;
+ 
+cursor:pointer;
+ 
+transition:.2s;
+ 
 }
-
-
-.chatIcon {
-  background-color: #eee5f5;
-  color: #8050a5;
+ 
+ 
+ 
+.card button:hover,
+.urgente button:hover{
+ 
+opacity:.8;
+ 
 }
-
-.emailIcon {
-  background-color: #f2e6ee;
-  color: #9c6591;
+ 
+ 
+ 
+.urgente{
+ 
+margin-top:30px;
+ 
+background:#a46bd3;
+ 
+color:white;
+ 
+padding:25px;
+ 
+border-radius:15px;
+ 
+display:flex;
+ 
+align-items:center;
+ 
+gap:20px;
+ 
 }
-
-.whatsappIcon {
-  background-color: #e7edf7;
-  color: #4b81cc;
+ 
+ 
+ 
+.urgente > i{
+ 
+font-size:40px;
+ 
 }
-
-.card h2 {
-  margin: 0 0 10px;
-
-  font-size: 17px;
-  color: #47285e;
-
-  transition: color 0.25s ease;
+ 
+ 
+ 
+.urgente div{
+ 
+flex:1;
+ 
 }
-
-.card:hover h2 {
-  color: #9b72cf;
+ 
+ 
+ 
+.urgente h2{
+ 
+margin:0;
+ 
 }
-
-.card p {
-  margin: 0;
-
-  min-height: 50px;
-
-  font-size: 13px;
-  line-height: 1.5;
-  color: #666666;
+ 
+ 
+ 
+.urgente p{
+ 
+margin:5px 0;
+ 
 }
-
-
-.botaoPrincipal,
-.botaoSecundario {
-  width: 190px;
-  height: 38px;
-
-  margin-top: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 13px;
-  text-decoration: none;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
+ 
+ 
+ 
+.urgente button{
+ 
+background:white;
+ 
+color:#8050a5;
+ 
 }
-
-.botaoPrincipal {
-  border: 1px solid #76509a;
-  background-color: #9b72cf;
-  color: #ffffff;
+ 
+ 
+ 
+@media(max-width:900px){
+ 
+.pagina{
+ 
+  margin-left:0;
+ 
 }
-
-.botaoPrincipal:hover {
-  background-color: #875fbd;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(64, 34, 79, 0.2);
+ 
+ 
+.cards{
+ 
+  grid-template-columns:1fr;
+ 
 }
-
-.botaoSecundario {
-  border: 1px solid #9b72cf;
-  background-color: #ffffff;
-  color: #8153a7;
+ 
+ 
+.urgente{
+ 
+  flex-direction:column;
+ 
+  text-align:center;
+ 
 }
-
-.botaoSecundario:hover {
-  background-color: #f2e8f7;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(64, 34, 79, 0.12);
-}
-
-
-
-.urgente {
-  min-height: 100px;
-
-  margin-top: 20px;
-  padding: 20px;
-
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  background-color: #9b72cf;
-  border: 2px solid #7950a3;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.urgente:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(64, 34, 79, 0.18);
-}
-
-.urgenteIcone {
-  width: 55px;
-  height: 55px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: #b18bd5;
-  border: 1px solid #ffffff;
-
-  color: #ffffff;
-  font-size: 24px;
-
-  transition: transform 0.3s ease;
-}
-
-
-.urgenteTexto {
-  flex: 1;
-}
-
-.urgenteTexto h2 {
-  margin: 0 0 5px;
-
-  color: #ffffff;
-  font-size: 18px;
-}
-
-.urgenteTexto p {
-  margin: 0;
-
-  color: #eeeeee;
-  font-size: 13px;
-}
-
-.botaoLigar {
-  width: 130px;
-  height: 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-
-  color: #8050a5;
-  text-decoration: none;
-
-  font-size: 13px;
-
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.botaoLigar:hover {
-  background-color: #f4eef8;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-}
-
-
-@media (max-width: 950px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .card:last-child {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .pagina {
-    margin-left: 0;
-    padding: 10px;
-  }
-
-  .container {
-    padding: 60px 15px 20px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .card:last-child {
-    grid-column: auto;
-  }
-
-  .urgente {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .botaoLigar {
-    width: 130px;
-  }
+ 
 }
