@@ -55,7 +55,7 @@ return(
        <p>
         ⏱ {curso.duracao}
         {"  "}
-        ⭐ {curso.avaliacao}
+       {curso.avaliacao}
        </p>
  
  
