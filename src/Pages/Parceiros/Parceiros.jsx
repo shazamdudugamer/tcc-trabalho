@@ -63,24 +63,6 @@ return(
        {curso.emAndamento && (
  
         <>
- 
-         <div className={styles.progressoTexto}>
-          <span>Progresso</span>
-          <span>{curso.progresso}%</span>
-         </div>
- 
- 
-         <div className={styles.barra}>
- 
-          <div
-           className={styles.valor}
-           style={{
-            width:`${curso.progresso}%`
-           }}
-          />
- 
-         </div>
- 
         </>
  
        )}
