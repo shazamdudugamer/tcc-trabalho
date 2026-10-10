@@ -1,186 +1,271 @@
-
-import { Link } from "react-router-dom";
 import styles from "./Dashboardadm.module.css";
+import { Link } from "react-router-dom";
 
+function Dashboardadm() {
+ return (
+  <div className={styles.dashboard}>
 
-function Dashboardadm(){
+   <aside className={styles.sidebarAdm}>
 
- return(
+    <div className={styles.logo}>
+     <img 
+      src="/logoIR1.png"
+      alt="Logo Instituto Recomeçar"
+     />
 
-   <main className={styles.dashboard}>
+     <div>
+      <strong>Instituto</strong>
+      <span>Recomeçar</span>
+     </div>
+    </div>
 
-      <header className={styles.topo}>
 
-          <div>
-               <span>Administrador</span>
-                    <h1>Dashboard</h1>
-                        </div>
+    <nav className={styles.menu}>
 
+     <Link 
+      to="/dashboardadm"
+      className={`${styles.menuItem} ${styles.menuAtivo}`}
+     >
+      <i className="bi bi-grid-1x2-fill"></i>
+      <span>Dashboard</span>
+     </Link>
 
-                            <button className={styles.perfil}>
-                                 <i className="bi bi-person"></i>
-                                      Admin
-                                          </button>
 
-                                             </header>
+     <Link 
+      to="/usuarias"
+      className={styles.menuItem}
+     >
+      <i className="bi bi-people"></i>
+      <span>Usuárias</span>
+     </Link>
 
 
+     <Link 
+      to="/psicologos"
+      className={styles.menuItem}
+     >
+      <i className="bi bi-person-heart"></i>
+      <span>Psicólogos</span>
+     </Link>
 
-                                                <section className={styles.conteudo}>
 
+     <Link 
+      to="/verificacoes"
+      className={styles.menuItem}
+     >
+      <i className="bi bi-check-circle"></i>
+      <span>Verificações</span>
+     </Link>
 
-                                                    <h2>Visão geral</h2>
 
+     <Link 
+      to="/relatorios"
+      className={styles.menuItem}
+     >
+      <i className="bi bi-bar-chart"></i>
+      <span>Relatórios</span>
+     </Link>
 
-                                                        <div className={styles.cards}>
 
+     <Link 
+      to="/configuracoes"
+      className={styles.menuItem}
+     >
+      <i className="bi bi-gear"></i>
+      <span>Configurações</span>
+     </Link>
 
-                                                             <div className={styles.card}>
-                                                                   <i className="bi bi-eye"></i>
-                                                                         <p>Acessos</p>
-                                                                               <strong>128</strong>
-                                                                                    </div>
 
+    </nav>
 
-                                                                                         <div className={styles.card}>
-                                                                                               <i className="bi bi-people"></i>
-                                                                                                     <p>Usuárias</p>
-                                                                                                           <strong>3247</strong>
-                                                                                                                </div>
 
+    <div className={styles.rodape}>
+     <span>
+      <i className="bi bi-shield-check"></i>
+      Área administrativa
+     </span>
+    </div>
 
-                                                                                                                     <div className={styles.card}>
-                                                                                                                           <i className="bi bi-book"></i>
-                                                                                                                                 <p>Cursos</p>
-                                                                                                                                       <strong>12</strong>
-                                                                                                                                            </div>
+   </aside>
 
 
-                                                                                                                                                 <div className={styles.card}>
-                                                                                                                                                       <i className="bi bi-heart"></i>
-                                                                                                                                                             <p>Parceiros</p>
-                                                                                                                                                                   <strong>4</strong>
-                                                                                                                                                                        </div>
 
+   <main className={styles.conteudo}>
 
-                                                                                                                                                                            </div>
 
+    <header className={styles.cabecalho}>
 
+     <div className={styles.titulo}>
+      <span>Administrador</span>
+      <h1>Dashboard</h1>
+     </div>
 
 
-                                                                                                                                                                                <h2 className={styles.tituloAcoes}>
-                                                                                                                                                                                     Ações rápidas
-                                                                                                                                                                                         </h2>
+     <div className={styles.usuario}>
 
+      <div className={styles.usuarioInfo}>
+       <strong>Administrador</strong>
+       <span>Painel ADM</span>
+      </div>
 
 
-                                                                                                                                                                                             <div className={styles.acoes}>
+      <div className={styles.avatar}>
+       <i className="bi bi-person-fill"></i>
+      </div>
 
 
-                                                                                                                                                                                                  <Link to="/admin/usuarias">
-                                                                                                                                                                                                        Usuárias
-                                                                                                                                                                                                              <span>Gerenciar →</span>
-                                                                                                                                                                                                                   </Link>
+      <button className={styles.botaoLogout}>
+       <i className="bi bi-box-arrow-right"></i>
+      </button>
 
+     </div>
 
-                                                                                                                                                                                                                        <Link to="/admin/psicologos">
-                                                                                                                                                                                                                              Psicólogos
-                                                                                                                                                                                                                                    <span>Gerenciar →</span>
-                                                                                                                                                                                                                                         </Link>
+    </header>
 
 
-                                                                                                                                                                                                                                              <Link to="/admin/verificacoes">
-                                                                                                                                                                                                                                                    Verificações
-                                                                                                                                                                                                                                                          <span>Analisar →</span>
-                                                                                                                                                                                                                                                               </Link>
 
+    <section className={styles.areaDashboard}>
 
-                                                                                                                                                                                                                                                                    <Link to="/admin/cursos">
-                                                                                                                                                                                                                                                                          Cursos
-                                                                                                                                                                                                                                                                                <span>Editar →</span>
-                                                                                                                                                                                                                                                                                     </Link>
 
+     <div className={styles.introducao}>
+      <h2>Visão geral</h2>
 
-                                                                                                                                                                                                                                                                                          <Link to="/admin/vendas">
-                                                                                                                                                                                                                                                                                                Vendas
-                                                                                                                                                                                                                                                                                                      <span>Acompanhar →</span>
-                                                                                                                                                                                                                                                                                                           </Link>
+      <p>
+       Acompanhe os principais indicadores da plataforma.
+      </p>
+     </div>
 
 
-                                                                                                                                                                                                                                                                                                                <Link to="/admin/relatorios">
-                                                                                                                                                                                                                                                                                                                      Relatórios
-                                                                                                                                                                                                                                                                                                                            <span>Visualizar →</span>
-                                                                                                                                                                                                                                                                                                                                 </Link>
 
+     <div className={styles.cards}>
 
-                                                                                                                                                                                                                                                                                                                                     </div>
 
+      <div className={styles.card}>
+       <div className={`${styles.icone} ${styles.iconeRoxo}`}>
+        <i className="bi bi-eye-fill"></i>
+       </div>
 
+       <div className={styles.cardTexto}>
+        <span>Acessos</span>
+        <strong>128</strong>
+        <small>Este mês</small>
+       </div>
+      </div>
 
 
-                                                                                                                                                                                                                                                                                                                                         <section className={styles.informacoes}>
 
+      <div className={styles.card}>
+       <div className={`${styles.icone} ${styles.iconeRosa}`}>
+        <i className="bi bi-person-plus-fill"></i>
+       </div>
 
-                                                                                                                                                                                                                                                                                                                                              <div className={styles.verificacao}>
+       <div className={styles.cardTexto}>
+        <span>Novos cadastros</span>
+        <strong>12</strong>
+        <small>Este mês</small>
+       </div>
+      </div>
 
-                                                                                                                                                                                                                                                                                                                                                    <h3>
-                                                                                                                                                                                                                                                                                                                                                           Aguardando verificação
-                                                                                                                                                                                                                                                                                                                                                                 </h3>
 
 
-                                                                                                                                                                                                                                                                                                                                                                       <div>
-                                                                                                                                                                                                                                                                                                                                                                              Mariana Silva
-                                                                                                                                                                                                                                                                                                                                                                                     <button>
-                                                                                                                                                                                                                                                                                                                                                                                             Verificar
-                                                                                                                                                                                                                                                                                                                                                                                                    </button>
-                                                                                                                                                                                                                                                                                                                                                                                                          </div>
+      <div className={styles.card}>
+       <div className={`${styles.icone} ${styles.iconeVerde}`}>
+        <i className="bi bi-people-fill"></i>
+       </div>
 
+       <div className={styles.cardTexto}>
+        <span>Usuárias ativas</span>
+        <strong>9</strong>
+        <small>Atualmente</small>
+       </div>
+      </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                <div>
-                                                                                                                                                                                                                                                                                                                                                                                                                       Dr. Ricardo
-                                                                                                                                                                                                                                                                                                                                                                                                                              <button>
-                                                                                                                                                                                                                                                                                                                                                                                                                                      Verificar
-                                                                                                                                                                                                                                                                                                                                                                                                                                             </button>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                   </div>
 
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+      <div className={styles.card}>
+       <div className={`${styles.icone} ${styles.iconeLaranja}`}>
+        <i className="bi bi-person-heart"></i>
+       </div>
 
+       <div className={styles.cardTexto}>
+        <span>Parceiros</span>
+        <strong>4</strong>
+        <small>Total</small>
+       </div>
+      </div>
 
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                             <div className={styles.sistema}>
+     </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <h3>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Status do sistema
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </h3>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Servidor: 24%
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </p>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Armazenamento: 68%
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </p>
 
+     <section className={styles.resumo}>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <strong>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   🟢 Tudo operacional
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         </strong>
+      <div className={styles.resumoCabecalho}>
+       <div>
+        <h2>Acesso rápido</h2>
+        <p>
+         Gerencie as principais áreas do sistema.
+        </p>
+       </div>
+      </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </div>
 
+      <div className={styles.resumoItens}>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </section>
 
+       <Link 
+        to="/usuarias"
+        className={styles.resumoItem}
+       >
+        <span>Gerenciar</span>
+        <strong>Usuárias</strong>
+       </Link>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </section>
 
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </main>
+       <Link 
+        to="/psicologos"
+        className={styles.resumoItem}
+       >
+        <span>Gerenciar</span>
+        <strong>Psicólogos</strong>
+       </Link>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        );
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
 
+       <Link 
+        to="/verificacoes"
+        className={styles.resumoItem}
+       >
+        <span>Analisar</span>
+        <strong>Verificações</strong>
+       </Link>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        export default Dashboardadm;
+
+
+       <Link 
+        to="/relatorios"
+        className={styles.resumoItem}
+       >
+        <span>Ver</span>
+        <strong>Relatórios</strong>
+       </Link>
+
+
+      </div>
+
+     </section>
+
+
+    </section>
+
+
+   </main>
+
+  </div>
+ );
+}
+
+export default Dashboardadm;
