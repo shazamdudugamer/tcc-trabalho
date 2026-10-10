@@ -1,7 +1,10 @@
 import { Routes, Route } from "react-router-dom";
  
 import Sidebar from "../Componentes/Sidebar";
- 
+ import AdminPsicologos from "../Pages/AdminPsicologos/AdminPsicologos";
+import Verificacoes from "../Pages/Verificacoes/Verificacoes";
+import Relatorios from "../Pages/Relatorios/Relatorios";
+import Configuracoes from "../Pages/Configuracoes/Configuracoes";
 import Suporte from "../Pages/Suporte/Suporte";
 import Agenda_psicologo from "../Pages/Agenda_Psicologo/Agenda_psicologos";
 import Sobre_nos from "../Pages/Sobre_nos/Sobre_nos";
@@ -47,7 +50,28 @@ function AppRoutes(){
      path="/Sobre_nos"
      element={<Sobre_nos />}
     />
- 
+ <Route
+ path="/admin-psicologos"
+ element={<AdminPsicologos />}
+/>
+
+
+<Route
+ path="/verificacoes"
+ element={<Verificacoes />}
+/>
+
+
+<Route
+ path="/relatorios"
+ element={<Relatorios />}
+/>
+
+
+<Route
+ path="/configuracoes"
+ element={<Configuracoes />}
+/>
  
     <Route
      path="/Parceiros"
