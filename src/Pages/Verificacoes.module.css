@@ -1,0 +1,319 @@
+.pagina{
+
+ min-height:100vh;
+
+ margin-left:230px;
+
+ padding:30px;
+
+ background:#f9edf3;
+
+ box-sizing:border-box;
+
+}
+
+
+
+.topo span{
+
+ color:#a768ca;
+
+ font-size:13px;
+
+}
+
+
+
+.topo h1{
+
+ margin:5px 0 25px;
+
+ color:#43216c;
+
+ font-size:24px;
+
+}
+
+
+
+
+.resumo{
+
+ display:grid;
+
+ grid-template-columns:repeat(3,1fr);
+
+ gap:20px;
+
+ margin-bottom:30px;
+
+}
+
+
+
+.resumo div{
+
+ background:white;
+
+ padding:20px;
+
+ border-radius:15px;
+
+ border:1px solid #ead9e2;
+
+}
+
+
+
+.resumo strong{
+
+ display:block;
+
+ color:#43216c;
+
+ font-size:28px;
+
+}
+
+
+
+.resumo span{
+
+ color:#806b85;
+
+ font-size:13px;
+
+}
+
+
+
+
+
+.lista{
+
+ display:flex;
+
+ flex-direction:column;
+
+ gap:15px;
+
+}
+
+
+
+.card{
+
+ background:white;
+
+ padding:20px;
+
+ border-radius:15px;
+
+ display:flex;
+
+ align-items:center;
+
+ gap:20px;
+
+ border:1px solid #ead9e2;
+
+ transition:.2s;
+
+}
+
+
+
+.card:hover{
+
+ transform:translateY(-3px);
+
+ box-shadow:0 5px 12px #0002;
+
+}
+
+
+
+.icone{
+
+ width:50px;
+
+ height:50px;
+
+ border-radius:50%;
+
+ display:flex;
+
+ align-items:center;
+
+ justify-content:center;
+
+ background:#eadcf2;
+
+ color:#a768ca;
+
+ font-size:22px;
+
+}
+
+
+
+.info{
+
+ flex:1;
+
+}
+
+
+
+.info h2{
+
+ margin:0;
+
+ color:#43216c;
+
+ font-size:17px;
+
+}
+
+
+
+.info p{
+
+ margin:5px 0;
+
+ color:#806b85;
+
+}
+
+
+
+.info small{
+
+ color:#a184ae;
+
+}
+
+
+
+.status{
+
+ background:#fff1d5;
+
+ color:#d18a16;
+
+ padding:6px 14px;
+
+ border-radius:20px;
+
+ font-size:12px;
+
+}
+
+
+
+.acoes{
+
+ display:flex;
+
+ gap:10px;
+
+}
+
+
+
+.acoes button{
+
+ border:none;
+
+ padding:8px 15px;
+
+ border-radius:20px;
+
+ cursor:pointer;
+
+}
+
+
+
+.aprovar{
+
+ background:#dff5e7;
+
+ color:#35915c;
+
+}
+
+
+
+.recusar{
+
+ background:#ffe3e3;
+
+ color:#d44b4b;
+
+}
+
+
+
+.acoes button:hover{
+
+ opacity:.8;
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+ .pagina{
+
+ margin-left:0;
+
+ }
+
+
+ .resumo{
+
+ grid-template-columns:1fr;
+
+ }
+
+
+ .card{
+
+ flex-wrap:wrap;
+
+ }
+
+}
+
+
+
+@media(max-width:600px){
+
+
+ .card{
+
+ flex-direction:column;
+
+ align-items:flex-start;
+
+ }
+
+
+ .acoes{
+
+ width:100%;
+
+ }
+
+
+ .acoes button{
+
+ flex:1;
+
+ }
+
+}
