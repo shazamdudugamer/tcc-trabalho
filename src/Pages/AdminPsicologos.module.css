@@ -1,0 +1,296 @@
+.pagina{
+
+ min-height:100vh;
+
+ background:#f9e9f0;
+
+ margin-left:230px;
+
+ padding:30px;
+
+ box-sizing:border-box;
+
+}
+
+
+
+.cabecalho{
+
+ display:flex;
+
+ justify-content:space-between;
+
+ align-items:center;
+
+ margin-bottom:30px;
+
+}
+
+
+
+.cabecalho span{
+
+ color:#a768ca;
+
+ font-size:13px;
+
+}
+
+
+
+.cabecalho h1{
+
+ color:#43216c;
+
+ margin:5px 0;
+
+}
+
+
+
+.cabecalho button{
+
+ border:none;
+
+ background:#a768ca;
+
+ color:white;
+
+ padding:10px 18px;
+
+ border-radius:20px;
+
+ cursor:pointer;
+
+}
+
+
+
+
+.cards{
+
+ display:grid;
+
+ grid-template-columns:repeat(3,1fr);
+
+ gap:20px;
+
+}
+
+
+
+.card{
+
+ background:white;
+
+ padding:25px;
+
+ border-radius:15px;
+
+ text-align:center;
+
+ border:1px solid #ead9e2;
+
+ transition:.2s;
+
+}
+
+
+
+.card:hover{
+
+ transform:translateY(-5px);
+
+ box-shadow:0 5px 15px #0002;
+
+}
+
+
+
+.foto{
+
+ width:70px;
+
+ height:70px;
+
+ margin:auto;
+
+ border-radius:50%;
+
+ background:#eadcf2;
+
+ display:flex;
+
+ align-items:center;
+
+ justify-content:center;
+
+ color:#a768ca;
+
+ font-size:30px;
+
+}
+
+
+
+.card h2{
+
+ font-size:17px;
+
+ color:#43216c;
+
+ margin:15px 0 8px;
+
+}
+
+
+
+.card p{
+
+ color:#806b85;
+
+ font-size:13px;
+
+ min-height:40px;
+
+}
+
+
+
+.dias{
+
+ display:block;
+
+ color:#8d5bb0;
+
+ background:#f5eafa;
+
+ padding:6px;
+
+ border-radius:15px;
+
+ font-size:12px;
+
+ margin:15px 0;
+
+}
+
+
+
+.ativa,
+.pendente{
+
+ display:inline-block;
+
+ padding:6px 15px;
+
+ border-radius:20px;
+
+ font-size:12px;
+
+}
+
+
+
+.ativa{
+
+ background:#ddf5e7;
+
+ color:#35915c;
+
+}
+
+
+
+.pendente{
+
+ background:#fff1d5;
+
+ color:#d18a16;
+
+}
+
+
+
+
+.botoes{
+
+ display:flex;
+
+ gap:10px;
+
+ margin-top:20px;
+
+}
+
+
+
+.botoes button{
+
+ flex:1;
+
+ border:none;
+
+ padding:9px;
+
+ border-radius:20px;
+
+ cursor:pointer;
+
+ background:#eadcf2;
+
+ color:#68418b;
+
+}
+
+
+
+.botoes button:hover{
+
+ background:#a768ca;
+
+ color:white;
+
+}
+
+
+
+@media(max-width:900px){
+
+ .pagina{
+
+ margin-left:0;
+
+ }
+
+
+ .cards{
+
+ grid-template-columns:repeat(2,1fr);
+
+ }
+
+}
+
+
+
+@media(max-width:600px){
+
+ .cabecalho{
+
+ flex-direction:column;
+
+ align-items:flex-start;
+
+ gap:15px;
+
+ }
+
+
+ .cards{
+
+ grid-template-columns:1fr;
+
+ }
+
+}
