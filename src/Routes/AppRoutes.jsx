@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
- 
+
 import Sidebar from "../Componentes/Sidebar";
- import AdminPsicologos from "../Pages/AdminPsicologos/AdminPsicologos";
+
+import AdminPsicologos from "../Pages/AdminPsicologos/AdminPsicologos";
 import Verificacoes from "../Pages/Verificacoes/Verificacoes";
 import Relatorios from "../Pages/Relatorios/Relatorios";
 import Configuracoes from "../Pages/Configuracoes/Configuracoes";
@@ -11,94 +12,72 @@ import Sobre_nos from "../Pages/Sobre_nos/Sobre_nos";
 import Parceiros from "../Pages/Parceiros/Parceiros";
 import Dashboardadm from "../Pages/Dashboardadm/Dashboardadm";
 import Usuarias from "../Pages/Usuarias/Usuarias";
- 
- 
+
+
 function AppRoutes(){
- 
+
  return(
- 
   <>
    <Sidebar />
- 
+
    <Routes>
- 
+
+    <Route path="/" element={<div>Início</div>} />
+
+    <Route path="/perfil" element={<div>Perfil</div>} />
+
+    <Route path="/suporte" element={<Suporte />} />
+
     <Route 
-     path="/"
-     element={<div>Início</div>}
-    />
- 
- 
-    <Route
-     path="/perfil"
-     element={<div>Perfil</div>}
-    />
- 
- 
-    <Route
-     path="/Suporte"
-     element={<Suporte />}
-    />
- 
- 
-    <Route
-     path="/Agenda_psicologo"
+     path="/agenda-psicologo"
      element={<Agenda_psicologo />}
     />
- 
- 
-    <Route
-     path="/Sobre_nos"
+
+    <Route 
+     path="/sobre-nos"
      element={<Sobre_nos />}
     />
- <Route
- path="/admin-psicologos"
- element={<AdminPsicologos />}
-/>
 
-
-<Route
- path="/verificacoes"
- element={<Verificacoes />}
-/>
-
-
-<Route
- path="/relatorios"
- element={<Relatorios />}
-/>
-
-
-<Route
- path="/configuracoes"
- element={<Configuracoes />}
-/>
- 
     <Route
-     path="/Parceiros"
+     path="/admin-psicologos"
+     element={<AdminPsicologos />}
+    />
+
+    <Route
+     path="/verificacoes"
+     element={<Verificacoes />}
+    />
+
+    <Route
+     path="/relatorios"
+     element={<Relatorios />}
+    />
+
+    <Route
+     path="/configuracoes"
+     element={<Configuracoes />}
+    />
+
+    <Route
+     path="/parceiros"
      element={<Parceiros />}
     />
- 
- 
+
     <Route
-     path="/Dashboardadm"
+     path="/dashboardadm"
      element={<Dashboardadm />}
     />
- 
- 
+
     <Route
-     path="/Usuarias"
+     path="/usuarias"
      element={<Usuarias />}
     />
- 
- 
+
    </Routes>
- 
+
   </>
- 
  );
- 
+
 }
- 
- 
+
 export default AppRoutes;
- 
