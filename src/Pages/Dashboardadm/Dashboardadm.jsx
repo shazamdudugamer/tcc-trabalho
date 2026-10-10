@@ -22,6 +22,7 @@ function Dashboardadm() {
 
     <nav className={styles.menu}>
 
+
      <Link 
       to="/dashboardadm"
       className={`${styles.menuItem} ${styles.menuAtivo}`}
@@ -29,6 +30,7 @@ function Dashboardadm() {
       <i className="bi bi-grid-1x2-fill"></i>
       <span>Dashboard</span>
      </Link>
+
 
 
      <Link 
@@ -40,6 +42,7 @@ function Dashboardadm() {
      </Link>
 
 
+
      <Link 
       to="/psicologos"
       className={styles.menuItem}
@@ -47,6 +50,7 @@ function Dashboardadm() {
       <i className="bi bi-person-heart"></i>
       <span>Psicólogos</span>
      </Link>
+
 
 
      <Link 
@@ -58,6 +62,17 @@ function Dashboardadm() {
      </Link>
 
 
+
+     <Link 
+      to="/monitoramento-vendas"
+      className={styles.menuItem}
+     >
+      <i className="bi bi-cart3"></i>
+      <span>Vendas</span>
+     </Link>
+
+
+
      <Link 
       to="/relatorios"
       className={styles.menuItem}
@@ -65,6 +80,7 @@ function Dashboardadm() {
       <i className="bi bi-bar-chart"></i>
       <span>Relatórios</span>
      </Link>
+
 
 
      <Link 
@@ -86,7 +102,9 @@ function Dashboardadm() {
      </span>
     </div>
 
+
    </aside>
+
 
 
 
@@ -124,16 +142,22 @@ function Dashboardadm() {
 
 
 
+
+
     <section className={styles.areaDashboard}>
 
 
      <div className={styles.introducao}>
+
       <h2>Visão geral</h2>
 
       <p>
        Acompanhe os principais indicadores da plataforma.
       </p>
+
      </div>
+
+
 
 
 
@@ -200,16 +224,25 @@ function Dashboardadm() {
 
 
 
+
+
      <section className={styles.resumo}>
 
+
       <div className={styles.resumoCabecalho}>
+
        <div>
         <h2>Acesso rápido</h2>
+
         <p>
          Gerencie as principais áreas do sistema.
         </p>
        </div>
+
       </div>
+
+
+
 
 
       <div className={styles.resumoItens}>
@@ -225,6 +258,7 @@ function Dashboardadm() {
 
 
 
+
        <Link 
         to="/psicologos"
         className={styles.resumoItem}
@@ -235,13 +269,17 @@ function Dashboardadm() {
 
 
 
+
+
        <Link 
-        to="/verificacoes"
+        to="/monitoramento-vendas"
         className={styles.resumoItem}
        >
-        <span>Analisar</span>
-        <strong>Verificações</strong>
+        <span>Financeiro</span>
+        <strong>Vendas</strong>
        </Link>
+
+
 
 
 
@@ -255,6 +293,7 @@ function Dashboardadm() {
 
 
       </div>
+
 
      </section>
 
