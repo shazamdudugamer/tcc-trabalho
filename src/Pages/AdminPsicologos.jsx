@@ -1,125 +1,148 @@
 import styles from "./AdminPsicologos.module.css";
 
-
-function AdminPsicologos(){
+function AdminPsicologos() {
 
  const psicologos = [
-
   {
-   nome:"Dra. Camila Mendes",
-   especialidade:"Psicologia Cognitivo-Comportamental",
-   dias:"Seg, Qua e Sex",
-   status:"Ativa"
+   nome: "Dr. Marcelo Vieira",
+   area: "Trauma e Reabilitação",
+   consultas: 42,
+   membro: "2024",
+   status: "Verificado",
+   imagem: "/marcelo.jpg"
   },
 
   {
-   nome:"Dr. Ricardo Almeida",
-   especialidade:"Saúde Mental",
-   dias:"Ter e Qui",
-   status:"Pendente"
+   nome: "Dra. Julia Mendes",
+   area: "Ansiedade e Depressão",
+   consultas: 28,
+   membro: "2024",
+   status: "Verificado",
+   imagem: "/julia.jpg"
   },
 
   {
-   nome:"Dra. Juliana Oliveira",
-   especialidade:"Psicologia Feminina",
-   dias:"Seg e Sáb",
-   status:"Ativa"
+   nome: "Dr. Roberto Silva",
+   area: "Terapia Cognitiva",
+   consultas: 0,
+   membro: "2024",
+   status: "Pendente",
+   imagem: "/roberto.jpg"
+  },
+
+  {
+   nome: "Dra. Fernanda Lima",
+   area: "Feminismo e Empoderamento",
+   consultas: 15,
+   membro: "2024",
+   status: "Verificado",
+   imagem: "/fernanda.jpg"
   }
-
  ];
 
 
- return(
+ return (
 
-  <main className={styles.pagina}>
+  <main className={styles.container}>
 
 
-   <header className={styles.cabecalho}>
+   <header className={styles.topo}>
 
     <div>
-     <span>Administrador</span>
      <h1>Gestão de Psicólogos</h1>
+     <p>
+      Monitore atendimentos e valide credenciais.
+     </p>
     </div>
 
 
-    <button>
-     + Novo Psicólogo
+    <button className={styles.botaoNovo}>
+     <i className="bi bi-person-plus"></i>
+     Novo Psicólogo
     </button>
 
-
    </header>
-
 
 
 
    <section className={styles.cards}>
 
 
-    {
-     psicologos.map((psicologo,index)=>(
+    {psicologos.map((psicologo,index)=>(
+
+     <article 
+      className={styles.card}
+      key={index}
+     >
 
 
-      <article 
-       className={styles.card}
-       key={index}
-      >
-
-
-       <div className={styles.foto}>
-        <i className="bi bi-person"></i>
-       </div>
-
-
-
-       <h2>
-        {psicologo.nome}
-       </h2>
-
-
-       <p>
-        {psicologo.especialidade}
-       </p>
-
-
-       <span className={styles.dias}>
-        {psicologo.dias}
-       </span>
+      <img
+       src={psicologo.imagem}
+       alt={psicologo.nome}
+       className={styles.avatar}
+      />
 
 
 
-       <span 
+      <h2>
+       {psicologo.nome}
+      </h2>
+
+
+      <span className={styles.area}>
+       {psicologo.area}
+      </span>
+
+
+
+      <span
        className={
-        psicologo.status==="Ativa"
-        ? styles.ativa
-        : styles.pendente
+        psicologo.status === "Pendente"
+        ? styles.pendente
+        : styles.verificado
        }
-       >
-        {psicologo.status}
-       </span>
+      >
+       {psicologo.status}
+      </span>
 
 
 
-       <div className={styles.botoes}>
 
-        <button>
-         Editar
-        </button>
+      <div className={styles.infos}>
 
 
-        <button>
-         Remover
-        </button>
-
-
+       <div>
+        <small>CONSULTAS</small>
+        <strong>{psicologo.consultas}</strong>
        </div>
 
 
+       <div>
+        <small>MEMBRO</small>
+        <strong>{psicologo.membro}</strong>
+       </div>
 
-      </article>
+
+      </div>
 
 
-     ))
-    }
+
+      <footer>
+
+       <button>
+        Perfil
+       </button>
+
+       <button className={styles.remover}>
+        Remover
+       </button>
+
+      </footer>
+
+
+     </article>
+
+    ))}
 
 
    </section>
