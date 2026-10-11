@@ -1,84 +1,121 @@
 import styles from "./MonitoramentoVendas.module.css";
 
-function MonitoramentoVendas() {
+
+function MonitoramentoVendas(){
 
  const vendas = [
+
   {
    pedido:"ORD-9281",
    loja:"Ateliê da Bia",
    cliente:"Beatriz Santos",
-   total:"R$ 159,90",
+   valor:"R$ 159,90",
    comissao:"R$ 15,99",
    status:"Concluído"
   },
+
+
   {
    pedido:"ORD-9280",
    loja:"Bordados Luana",
    cliente:"Daniela Lima",
-   total:"R$ 89,00",
+   valor:"R$ 89,00",
    comissao:"R$ 8,90",
    status:"Processando"
   },
+
+
   {
    pedido:"ORD-9279",
    loja:"Ateliê da Bia",
    cliente:"Ana Paula Costa",
-   total:"R$ 210,00",
+   valor:"R$ 210,00",
    comissao:"R$ 21,00",
    status:"Concluído"
   },
+
+
   {
    pedido:"ORD-9278",
    loja:"Loja da Tatá",
    cliente:"Elaine Rocha",
-   total:"R$ 45,50",
+   valor:"R$ 45,50",
    comissao:"R$ 4,55",
    status:"Cancelado"
+  },
+
+
+  {
+   pedido:"ORD-9277",
+   loja:"Bordados Luana",
+   cliente:"Bruna Oliveira",
+   valor:"R$ 120,00",
+   comissao:"R$ 12,00",
+   status:"Concluído"
   }
+
  ];
 
 
- return (
+ return(
 
  <main className={styles.container}>
 
 
   <header className={styles.topo}>
 
+
    <div>
-    <span>Financeiro</span>
-    <h1>Monitoramento de Vendas</h1>
+
+    <h1>
+     Monitoramento de Vendas
+    </h1>
+
     <p>
-     Acompanhe vendas e comissões da plataforma.
+     Acompanhe o fluxo financeiro e comissões (10%).
     </p>
+
    </div>
 
 
-   <button>
-    <i className="bi bi-download"></i>
-    Exportar relatório
-   </button>
+
+   <div className={styles.acoes}>
+
+    <button>
+     <i className="bi bi-calendar"></i>
+     Março/2024
+    </button>
+
+
+    <button className={styles.exportar}>
+     Exportar Relatório
+    </button>
+
+   </div>
+
 
   </header>
 
 
 
 
-  <section className={styles.area}>
+
+  <section className={styles.conteudo}>
 
 
    <div className={styles.tabela}>
 
-    <h2>Pedidos recentes</h2>
 
+    <div className={styles.cabecalhoTabela}>
 
-    <div className={styles.linhaTitulo}>
      <span>Pedido</span>
-     <span>Loja</span>
+     <span>Loja / Vendedora</span>
      <span>Total</span>
-     <span>Comissão</span>
+     <span>Comissão (10%)</span>
      <span>Status</span>
+
     </div>
+
 
 
 
@@ -90,32 +127,64 @@ function MonitoramentoVendas() {
        key={index}
       >
 
+
        <div>
-        <strong>{venda.pedido}</strong>
-        <small>{venda.cliente}</small>
+
+        <strong>
+         {venda.pedido}
+        </strong>
+
+        <small>
+         hoje, 10:20
+        </small>
+
        </div>
 
-       <span>{venda.loja}</span>
 
-       <span>{venda.total}</span>
 
-       <span className={styles.comissao}>
+       <div>
+
+        <strong>
+         {venda.loja}
+        </strong>
+
+        <small>
+         venda para {venda.cliente}
+        </small>
+
+       </div>
+
+
+
+
+       <strong>
+        {venda.valor}
+       </strong>
+
+
+
+
+       <strong className={styles.comissao}>
         {venda.comissao}
-       </span>
+       </strong>
+
+
 
 
        <span 
         className={
-         venda.status === "Cancelado"
+         venda.status==="Cancelado"
          ? styles.cancelado
          :
-         venda.status === "Processando"
+         venda.status==="Processando"
          ? styles.processando
          :
          styles.concluido
         }
        >
+
         {venda.status}
+
        </span>
 
 
@@ -131,80 +200,96 @@ function MonitoramentoVendas() {
 
 
 
-   <aside className={styles.lateral}>
+
+   <aside className={styles.resumo}>
 
 
-    <div className={styles.cardGrande}>
+    <div className={styles.cardRoxo}>
 
      <span>
       Faturamento Marketplace
      </span>
 
-     <h2>
-      R$ 624,40
-     </h2>
+     <strong>
+      R$ 624.40
+     </strong>
 
-     <p>
+     <small>
       Volume total de vendas no mês
-     </p>
+     </small>
 
     </div>
 
 
 
 
-    <div className={styles.cardGrande}>
+
+    <div className={styles.cardRoxo2}>
 
      <span>
-      Receita Instituto
+      Receita Instituto (10%)
      </span>
 
-     <h2>
-      R$ 62,44
-     </h2>
+     <strong>
+      R$ 62.44
+     </strong>
 
-     <p>
-      Comissão recebida
-     </p>
+     <small>
+      Valor disponível para reinvestimento
+     </small>
 
     </div>
+
 
 
 
 
     <div className={styles.lojas}>
 
-     <h3>
+
+     <h2>
       Vendas por Loja
-     </h3>
+     </h2>
 
 
-     <div>
+     <p>
       Ateliê da Bia
-      <strong>
-       R$ 369,90
-      </strong>
+      <strong>R$ 369.90</strong>
+     </p>
+
+
+     <div className={styles.barra}>
+      <span></span>
      </div>
 
 
-     <div>
+
+
+     <p>
       Bordados Luana
-      <strong>
-       R$ 209,00
-      </strong>
+      <strong>R$ 209.00</strong>
+     </p>
+
+
+     <div className={styles.barra}>
+      <span></span>
      </div>
 
 
-     <div>
+
+
+     <p>
       Loja da Tatá
-      <strong>
-       R$ 45,50
-      </strong>
+      <strong>R$ 45.50</strong>
+     </p>
+
+
+     <div className={styles.barra}>
+      <span></span>
      </div>
 
 
     </div>
-
 
 
    </aside>
@@ -215,7 +300,7 @@ function MonitoramentoVendas() {
 
  </main>
 
- )
+ );
 
 }
 
