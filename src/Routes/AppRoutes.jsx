@@ -25,7 +25,6 @@ import Usuarias from "../Pages/Usuarias/Usuarias";
 
 import MonitoramentoVendas from "../Pages/MonitoramentoVendas/MonitoramentoVendas";
 
-import Configuracoes from "../Pages/Configuracoes/Configuracoes";
 
 
 
@@ -86,12 +85,6 @@ function AppRoutes(){
     />
 
 
-
-
-    {/* ADMIN */}
-
-
-
     <Route
      path="/dashboardadm"
      element={<Dashboardadm />}
@@ -131,14 +124,6 @@ function AppRoutes(){
      path="/relatorios"
      element={<Relatorios />}
     />
-
-
-
-    <Route
-     path="/configuracoes"
-     element={<Configuracoes />}
-    />
-
 
 
    </Routes>
